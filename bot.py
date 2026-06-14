@@ -11,7 +11,7 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 # ─── Текст правил ────────────────────────────────────────────────
-CLAN_NAME = "⚔️ [Название клана]"
+CLAN_NAME = "🌺 Пассифлора"
 
 RULES_WORLD = """
 ⚔️ *А) Правила поведения в мире*
@@ -74,7 +74,7 @@ async def cmd_start(message: Message):
 async def accept_rules(callback: CallbackQuery):
     await callback.message.edit_reply_markup(reply_markup=None)
     await callback.message.answer(
-        "✅ *Отлично\!* Ты принял правила клана\.\n\n"
+        "✅ *Отлично\!* Ты принял(а) правила клана\.\n\n"
         "Теперь можешь вступить в наш канал по кнопке ниже 👇",
         parse_mode="MarkdownV2",
         reply_markup=join_keyboard()
